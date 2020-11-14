@@ -265,7 +265,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &89952835
@@ -541,7 +541,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &174292965
@@ -688,7 +688,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &195267934
@@ -835,7 +835,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &208977391
@@ -951,7 +951,7 @@ SpriteRenderer:
   m_Size: {x: 3, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &208977395
@@ -979,6 +979,7 @@ GameObject:
   - component: {fileID: 272588693}
   - component: {fileID: 272588692}
   - component: {fileID: 272588691}
+  - component: {fileID: 272588696}
   - component: {fileID: 272588690}
   - component: {fileID: 272588695}
   - component: {fileID: 272588694}
@@ -996,7 +997,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272588689}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -1073,7 +1074,7 @@ SpriteRenderer:
   m_Size: {x: 5.4, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &272588693
@@ -1097,7 +1098,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272588689}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -1123,7 +1124,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272588689}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -1142,6 +1143,144 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.023531, y: 2.210866}
   m_EdgeRadius: 0
+--- !u!60 &272588696
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272588689}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.4, y: 7.2}
+    newSize: {x: 5.4, y: 7.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.84, y: -2.96}
+      - {x: 0.96, y: -2.95}
+      - {x: 1.02, y: -2.81}
+      - {x: 1, y: -2.72}
+      - {x: 0.95, y: -2.58}
+      - {x: 0.84, y: -2.35}
+      - {x: 0.98999995, y: -2.21}
+      - {x: 1.2099999, y: -2.04}
+      - {x: 1.54, y: -1.73}
+      - {x: 1.79, y: -1.5}
+      - {x: 2.09, y: -1.22}
+      - {x: 2.21, y: -1.16}
+      - {x: 2.47, y: -1.16}
+      - {x: 2.62, y: -1.06}
+      - {x: 2.6499999, y: -0.96999997}
+      - {x: 2.6499999, y: -0.85999995}
+      - {x: 2.6399999, y: -0.47}
+      - {x: 2.6299999, y: 0.02}
+      - {x: 2.61, y: 0.59999996}
+      - {x: 2.59, y: 0.78}
+      - {x: 2.57, y: 0.78999996}
+      - {x: 2.44, y: 0.78999996}
+      - {x: 2.51, y: 1.04}
+      - {x: 2.51, y: 1.0799999}
+      - {x: 2.48, y: 1.11}
+      - {x: 1.9599999, y: 1.11}
+      - {x: 1.9399999, y: 1.13}
+      - {x: 1.87, y: 1.15}
+      - {x: 1.8399999, y: 1.02}
+      - {x: 1.93, y: 0.78999996}
+      - {x: 1.77, y: 0.78999996}
+      - {x: 1.74, y: 0.76}
+      - {x: 1.73, y: 0.72999996}
+      - {x: 1.73, y: 0.56}
+      - {x: 1.75, y: 0.21}
+      - {x: 1.7199999, y: 0.21}
+      - {x: 1.73, y: 0.51}
+      - {x: 1.73, y: 0.7}
+      - {x: 1.74, y: 0.95}
+      - {x: 1.75, y: 1.17}
+      - {x: 1.68, y: 1.26}
+      - {x: 1.52, y: 1.29}
+      - {x: 1.49, y: 1.42}
+      - {x: 1.42, y: 1.77}
+      - {x: 1.35, y: 1.9599999}
+      - {x: 1.24, y: 2.2}
+      - {x: 1.17, y: 2.33}
+      - {x: 0.91999996, y: 2.6699998}
+      - {x: 0.71999997, y: 2.8899999}
+      - {x: 0.56, y: 3.04}
+      - {x: 0.24, y: 3.29}
+      - {x: 0.11, y: 3.3799999}
+      - {x: 0.04, y: 3.4099998}
+      - {x: -0.16, y: 3.4099998}
+      - {x: -0.24, y: 3.37}
+      - {x: -0.38, y: 3.27}
+      - {x: -0.62, y: 3.07}
+      - {x: -0.72999996, y: 2.97}
+      - {x: -0.96999997, y: 2.6799998}
+      - {x: -1.15, y: 2.3899999}
+      - {x: -1.23, y: 2.24}
+      - {x: -1.4, y: 1.8}
+      - {x: -1.4699999, y: 1.54}
+      - {x: -1.55, y: 1.29}
+      - {x: -1.5999999, y: 1.27}
+      - {x: -1.7099999, y: 1.16}
+      - {x: -1.74, y: 1.05}
+      - {x: -1.7199999, y: 0.82}
+      - {x: -1.67, y: 0.39}
+      - {x: -1.65, y: 0.19999999}
+      - {x: -1.7099999, y: 0.21}
+      - {x: -1.7199999, y: 0.53999996}
+      - {x: -1.75, y: 0.71}
+      - {x: -1.76, y: 0.74}
+      - {x: -1.8299999, y: 0.76}
+      - {x: -1.92, y: 0.74}
+      - {x: -1.8499999, y: 1.05}
+      - {x: -1.89, y: 1.13}
+      - {x: -1.93, y: 1.12}
+      - {x: -2.47, y: 1.11}
+      - {x: -2.53, y: 1.09}
+      - {x: -2.53, y: 0.94}
+      - {x: -2.4199998, y: 0.71999997}
+      - {x: -2.62, y: 0.71}
+      - {x: -2.6499999, y: 0.65999997}
+      - {x: -2.6499999, y: -1.06}
+      - {x: -2.6399999, y: -1.09}
+      - {x: -2.59, y: -1.14}
+      - {x: -2.52, y: -1.1999999}
+      - {x: -2.18, y: -1.1999999}
+      - {x: -2.05, y: -1.3199999}
+      - {x: -1.87, y: -1.4599999}
+      - {x: -1.74, y: -1.54}
+      - {x: -1.5699999, y: -1.66}
+      - {x: -1.35, y: -1.8499999}
+      - {x: -1.11, y: -2.05}
+      - {x: -0.81, y: -2.29}
+      - {x: -0.76, y: -2.35}
+      - {x: -0.78, y: -2.54}
+      - {x: -0.90999997, y: -2.82}
+      - {x: -0.91999996, y: -2.8899999}
+      - {x: -0.85999995, y: -2.96}
+      - {x: -0.61, y: -2.96}
+      - {x: -0.57, y: -3.07}
+      - {x: -0.48, y: -3.25}
+      - {x: -0.45, y: -3.3}
+      - {x: -0.29, y: -3.32}
+      - {x: -0.14, y: -3.34}
+      - {x: -0.06, y: -3.35}
+      - {x: 0.32, y: -3.35}
+      - {x: 0.51, y: -3.32}
+      - {x: 0.59, y: -3.1999998}
+      - {x: 0.65, y: -2.96}
 --- !u!1 &350272039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1285,7 +1424,7 @@ SpriteRenderer:
   m_Size: {x: 3, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &484053141
@@ -1322,7 +1461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!58 &560836767
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1432,7 +1571,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &560836771
@@ -1616,7 +1755,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &647768828
@@ -1640,7 +1779,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!58 &647768829
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1725,7 +1864,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &647768832
@@ -1927,7 +2066,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &969925274
@@ -2074,7 +2213,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1021702736
@@ -2093,7 +2232,7 @@ GameObject:
   - component: {fileID: 1021702742}
   m_Layer: 0
   m_Name: Enemy_StraightShooter
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2145,7 +2284,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1021702738
@@ -2407,7 +2546,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1244680626
@@ -2476,7 +2615,7 @@ SpriteRenderer:
   m_Size: {x: 3, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1244680628
@@ -2714,7 +2853,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1626142129
@@ -2830,7 +2969,7 @@ SpriteRenderer:
   m_Size: {x: 3, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1626142133
@@ -3089,8 +3228,11 @@ MonoBehaviour:
   rightEngineerBool: 1
   leftGunnerBool: 1
   rightGunnerBool: 1
-  waveArrayEasy: []
+  waveArrayEasy:
+  - {fileID: 631922826624822789, guid: 7874e4fb70caea14bbbf03333778bb42, type: 3}
+  - {fileID: 6373426427430980918, guid: f5cf27377ba0c284eafbb5f37d4203f7, type: 3}
   waveArrayHard: []
+  gameStartDate: 0
 --- !u!4 &1968125122
 Transform:
   m_ObjectHideFlags: 0

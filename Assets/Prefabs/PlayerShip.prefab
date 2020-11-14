@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3264631552275794457}
   - component: {fileID: 3264631552275794452}
   - component: {fileID: 3264631552275794455}
-  - component: {fileID: 3264631552275794453}
   - component: {fileID: 3264631552275794450}
   - component: {fileID: 3264631552275794451}
   m_Layer: 0
@@ -106,7 +105,7 @@ MonoBehaviour:
   mvSpeed: 4
   drag: 15
   invulnerableDuration: 1
-  driftSpeed: 0
+  driftSpeed: 0.2
 --- !u!50 &3264631552275794455
 Rigidbody2D:
   serializedVersion: 4
@@ -128,25 +127,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3264631552275794453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3264631552275794456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cb4bd08caba16343b6f81d2c942e3d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireRate: 1
-  bulletSpeed: 10
-  bulletPrefab: {fileID: 6765492423124477628, guid: eced0d33380850f44b63b6beaa3d0c1e,
-    type: 3}
-  shooterList:
-  - {fileID: 3264631552523316712}
-  - {fileID: 3264631552563178071}
 --- !u!70 &3264631552275794450
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -198,8 +178,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3264631552523316713}
+  - component: {fileID: 2604018847146875695}
   m_Layer: 0
-  m_Name: Shooter
+  m_Name: RightShooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -219,6 +200,24 @@ Transform:
   m_Father: {fileID: 3264631552275794454}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2604018847146875695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3264631552523316712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb4bd08caba16343b6f81d2c942e3d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 2.5
+  bulletSpeed: 10
+  bulletPrefab: {fileID: 6765492423124477628, guid: eced0d33380850f44b63b6beaa3d0c1e,
+    type: 3}
+  shooterList:
+  - {fileID: 3264631552523316712}
 --- !u!1 &3264631552563178071
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,8 +227,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3264631552563178068}
+  - component: {fileID: 4972730348541823653}
   m_Layer: 0
-  m_Name: Shooter (1)
+  m_Name: LeftShooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,3 +249,21 @@ Transform:
   m_Father: {fileID: 3264631552275794454}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4972730348541823653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3264631552563178071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb4bd08caba16343b6f81d2c942e3d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 2.5
+  bulletSpeed: 10
+  bulletPrefab: {fileID: 6765492423124477628, guid: eced0d33380850f44b63b6beaa3d0c1e,
+    type: 3}
+  shooterList:
+  - {fileID: 3264631552563178071}

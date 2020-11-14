@@ -14,6 +14,9 @@ public class PlayerShipController : AbstractShip
 
     private bool invulnerable = false;
 
+    private bool rightGunner = true;
+    private bool leftGunner = true;
+
     private Rigidbody2D rBody;
     private GameController controller;
 
@@ -26,6 +29,28 @@ public class PlayerShipController : AbstractShip
     private void Start()
     {
         controller = GameController.instance;
+    }
+
+    private void Update()
+    {
+        if (rightGunner)
+        {
+            if (!controller.rightGunnerBool)
+            {
+                transform.Find("RightShooter").GetComponent<AutoShooter>().Unajust();
+                rightGunner = false;
+            }
+        }
+
+        if (leftGunner)
+        {
+            if (!controller.leftGunnerBool)
+            {
+                transform.Find("LeftShooter").GetComponent<AutoShooter>().Unajust();
+                rightGunner = false;
+            }
+        }
+
     }
 
     private void FixedUpdate()

@@ -11,6 +11,7 @@ public class AutoShooter : MonoBehaviour
     public GameObject[] shooterList;
 
     private float currentCooldown = 0;
+    private bool unajusted = false;
 
     private void Update()
     {
@@ -36,8 +37,19 @@ public class AutoShooter : MonoBehaviour
             instantiated.GetComponent<Rigidbody2D>().velocity = shooter.transform.up*bulletSpeed;
         }
 
-        currentCooldown = fireRate;
+        if (!unajusted)
+        {
+            currentCooldown = fireRate;
+        } else
+        {
+            currentCooldown = fireRate + Random.Range(-0.2f, 0.2f);
+        }
 
+    }
+
+    public void Unajust()
+    {
+        unajusted = true;
     }
 
 }

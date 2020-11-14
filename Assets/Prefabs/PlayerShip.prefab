@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c40acb6143842fd48a94625632212d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
+  maxHealth: 10
   health: 0
   acceleration: 20
   mvSpeed: 4
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cb4bd08caba16343b6f81d2c942e3d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 2.5
+  fireRate: 1
   bulletSpeed: 10
   bulletPrefab: {fileID: 6765492423124477628, guid: eced0d33380850f44b63b6beaa3d0c1e,
     type: 3}
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cb4bd08caba16343b6f81d2c942e3d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 2.5
+  fireRate: 1
   bulletSpeed: 10
   bulletPrefab: {fileID: 6765492423124477628, guid: eced0d33380850f44b63b6beaa3d0c1e,
     type: 3}

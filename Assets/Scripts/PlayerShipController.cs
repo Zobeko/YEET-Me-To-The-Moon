@@ -75,6 +75,7 @@ public class PlayerShipController : AbstractShip
         {
             //Le vaisseau ralentit grâce au drag
             //rBody.velocity -= rBody.velocity.normalized * drag * Time.fixedDeltaTime;
+            rBody.velocity = Vector2.zero;
         }
 
         if (!controller.leftEngineerBool)

@@ -26,7 +26,13 @@ public class GameController : MonoBehaviour
 
     public static GameController instance;
 
-    private void Awake()
+    IEnumerator SpawnEnemyCoroutine()
+    {
+        yield return new WaitForSeconds(1f);
+        SpawnRandomWave(true);
+    }
+
+private void Awake()
     {
         if (instance != null && instance != this)
         {
@@ -42,15 +48,16 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SpawnEnemyCoroutine();
     }
 
     // Update is called once per frame
     void Update() 
     {
+
         previousYeetStatus = currentYeetStatus;
         currentYeetStatus = YeetController.instance.isYeetActivated;
-        if (previousYeetStatus == true && currentYeetStatus == false) //mets à jour en cas de yeet
+        if (previousYeetStatus == true && currentYeetStatus == false) //mets à jour en cas de yeet  
         {
             OnPassengerYeet(YeetController.instance.yeetedPassengerType);
             DestroyEnemies();

@@ -161,8 +161,7 @@ MonoBehaviour:
   rightGunnerBool: 1
   waveArrayEasy:
   - {fileID: 631922826624822789, guid: 7874e4fb70caea14bbbf03333778bb42, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 6373426427430980918, guid: f5cf27377ba0c284eafbb5f37d4203f7, type: 3}
   waveArrayHard: []
 --- !u!4 &1517766801
 Transform:

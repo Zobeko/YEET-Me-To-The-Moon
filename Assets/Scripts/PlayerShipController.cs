@@ -14,7 +14,7 @@ public class PlayerShipController : AbstractShip
 
     private Rigidbody2D rBody;
 
-    private void Awake()
+    protected void Awake()
     {
         base.Awake();
         rBody = GetComponent<Rigidbody2D>();
@@ -63,6 +63,7 @@ public class PlayerShipController : AbstractShip
     protected override void OnDeath()
     {
         //Do stuff
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

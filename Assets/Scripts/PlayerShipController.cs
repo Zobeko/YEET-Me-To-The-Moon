@@ -36,8 +36,8 @@ public class PlayerShipController : AbstractShip
     void MovePlayer()
     {
         //On récupère les touches de déplacements directionnel
-        float mvX = Convert.ToInt32(Input.GetKey("d")) - Convert.ToInt32(Input.GetKey("a"));
-        float mvY = Convert.ToInt32(Input.GetKey("w")) - Convert.ToInt32(Input.GetKey("s"));
+        float mvX = Convert.ToInt32(Input.GetButton("Right")) - Convert.ToInt32(Input.GetButton("Left"));
+        float mvY = Convert.ToInt32(Input.GetButton("Up")) - Convert.ToInt32(Input.GetButton("Down"));
 
         Vector2 mvDirection = new Vector2(mvX,mvY) * controller.reversedControls;
 

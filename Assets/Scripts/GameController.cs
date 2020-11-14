@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
     public GameObject[] waveArrayEasy;
     public GameObject[] waveArrayHard;
     
-    private int score = 0;
+    public int score = 0;
 
     public static GameController instance;
 
@@ -157,6 +157,7 @@ private void Awake()
         foreach (GameObject ennemy in GameObject.FindGameObjectsWithTag("Enemy"))
         {
             Destroy(ennemy);
+            OnEnemyDeath();
         }
     }
         

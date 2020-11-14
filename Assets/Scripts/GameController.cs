@@ -59,6 +59,10 @@ public class GameController : MonoBehaviour
         {
             case Passenger.PassengerType.civilian:
                 remainingCivilians -= 1;
+                if (remainingCivilians == 0)
+                {
+                    //game over
+                }
                 return;
 
             case Passenger.PassengerType.rightEngineer:

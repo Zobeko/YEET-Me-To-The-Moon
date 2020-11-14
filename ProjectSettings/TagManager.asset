@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Passenger
-  - PlaneShip
+  tags: [Enemy, Passenger, PlaneShip]
   layers:
   - Default
   - TransparentFX

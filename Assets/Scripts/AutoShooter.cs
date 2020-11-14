@@ -29,6 +29,7 @@ public class AutoShooter : MonoBehaviour
     {
         GameObject instantiated;
 
+        //On fait le tour des shooters passes par l'inspecteur et on tire
         foreach (GameObject shooter in shooterList)
         {
             instantiated = Instantiate(bulletPrefab, shooter.transform.position, shooter.transform.rotation);

@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AbstractShip : MonoBehaviour
+public abstract class AbstractShip : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public int maxHealth = 1;
+    protected int health;
+
+    protected void Awake()
     {
-        
+        health = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public abstract void OnDamageTaken(int amount);
+
+    protected abstract void OnDeath();
+
 }

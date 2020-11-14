@@ -46,15 +46,15 @@ public class GameController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() 
     {
-        //previousYeetStatus = currentYeetStatus;
-        //currentYeetStatus = YeetController.instance.isYeetActivated;
-        //if (previousYeetStatus == true && currentYeetStatus == false)
-        //{
-        //    OnPassengerYeet(YeetController.instance.yeetedPassengerType);
-        //    DestroyEnemies();
-        //}
+        previousYeetStatus = currentYeetStatus;
+        currentYeetStatus = YeetController.instance.isYeetActivated;
+        if (previousYeetStatus == true && currentYeetStatus == false) //mets à jour en cas de yeet
+        {
+            OnPassengerYeet(YeetController.instance.yeetedPassengerType);
+            DestroyEnemies();
+        }
     }
 
     public void OnEnemyDeath() //incremente le score sur la mort d'un ennemi 
@@ -62,7 +62,6 @@ public class GameController : MonoBehaviour
         score += 100;
     }
 
-    public class Passenger { public enum PassengerType {civilian, rightEngineer, leftEngineer, rightGunner, leftGunner, pilot}; public PassengerType type; } //placeholder
     public void OnPassengerYeet(Passenger.PassengerType yeetedPassengerType) // mets à jour les booléns et valeurs en fonction du passager yeete
     {
         switch (yeetedPassengerType)
@@ -95,7 +94,7 @@ public class GameController : MonoBehaviour
                 leftGunnerBool = false;
                 return;
 
-            case Passenger.PassengerType.pilot:
+            case Passenger.PassengerType.pilote:
                 remainingCrew -= 1;
                 reversedControls = -1;
                 return;

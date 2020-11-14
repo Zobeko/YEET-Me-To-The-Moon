@@ -11,4 +11,14 @@ public class MainMenuManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void Replay()
+    {
+        SceneLoader.GoToPrevScene();
+    }
+
+    public void GotToMenu()
+    {
+        SceneLoader.GoToStart();
+    }
 }

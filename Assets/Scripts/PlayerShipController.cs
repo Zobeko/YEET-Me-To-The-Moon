@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerShipController : AbstractShip
 {
@@ -106,7 +107,7 @@ public class PlayerShipController : AbstractShip
 
     protected override void OnDeath()
     {
-        //Do stuff
+        SceneManager.LoadScene("GameOverScene");
         Destroy(gameObject);
     }
 
@@ -117,6 +118,7 @@ public class PlayerShipController : AbstractShip
         if (damager && collision.gameObject.CompareTag("Enemy"))
         {
             OnDamageTaken(damager.damageValue);
+            Destroy(collision.gameObject);
         }
     }
 

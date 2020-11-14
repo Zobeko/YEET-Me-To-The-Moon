@@ -61,7 +61,7 @@ private void Awake()
     void Start()
     {
         StartCoroutine("StartGameCoroutine");
-        waveSpawnPoint = new Vector3(-5f, 0f, 0f);
+        waveSpawnPoint = new Vector3(-4.5f, 0f, 0f);
     }
 
     // Update is called once per frame

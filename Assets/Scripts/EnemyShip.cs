@@ -24,6 +24,7 @@ public class EnemyShip : AbstractShip
         if (health <= 0)
         {
             OnDeath();
+            Debug.Log("damageTaken");
             return;
         }
     }
@@ -31,6 +32,7 @@ public class EnemyShip : AbstractShip
     protected override void OnDeath()
     {
         //Do stuff
+        Debug.Log("death");
         Destroy(gameObject);
     }
 
@@ -40,6 +42,7 @@ public class EnemyShip : AbstractShip
 
         if (damager && collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("collision");
             OnDamageTaken(damager.damageValue);
         }
     }

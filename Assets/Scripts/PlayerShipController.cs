@@ -48,7 +48,7 @@ public class PlayerShipController : AbstractShip
         } else
         {
             //Le vaisseau ralentit grâce au drag
-            rBody.velocity -= rBody.velocity.normalized * drag * Time.fixedDeltaTime;
+            //rBody.velocity -= rBody.velocity.normalized * drag * Time.fixedDeltaTime;
         }
 
         if (!controller.leftEngineerBool)

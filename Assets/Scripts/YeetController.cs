@@ -62,7 +62,7 @@ public class YeetController : MonoBehaviour
     {
         Time.timeScale = 0.05f;
         Cursor.visible = true;
-        yeetTimeScale += 1 / 60f;
+        yeetTimeScale += Time.deltaTime * 20 ;
 
  
 

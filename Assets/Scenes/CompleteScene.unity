@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  deathSpeed: {x: 0.5, y: 0}
+  deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
 --- !u!61 &39930950
@@ -444,7 +444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 4
-  deathSpeed: {x: 0.5, y: 0}
+  deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
 --- !u!61 &169691487
@@ -591,7 +591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  deathSpeed: {x: 0.5, y: 0}
+  deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
 --- !u!61 &174292968
@@ -738,7 +738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  deathSpeed: {x: 0.5, y: 0}
+  deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
 --- !u!61 &195267937
@@ -850,6 +850,8 @@ GameObject:
   - component: {fileID: 272588692}
   - component: {fileID: 272588691}
   - component: {fileID: 272588690}
+  - component: {fileID: 272588695}
+  - component: {fileID: 272588694}
   m_Layer: 0
   m_Name: PlaneShip
   m_TagString: PlaneShip
@@ -941,7 +943,7 @@ SpriteRenderer:
   m_Size: {x: 3, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &272588693
@@ -958,6 +960,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &272588694
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272588689}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.1288743, y: -0.02612108}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.4, y: 7.2}
+    newSize: {x: 3, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0377665, y: 2.236987}
+  m_EdgeRadius: 0
+--- !u!61 &272588695
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272588689}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.109871, y: 0.013060629}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.4, y: 7.2}
+    newSize: {x: 3, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.023531, y: 2.210866}
+  m_EdgeRadius: 0
 --- !u!1 &350272039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,7 +1451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3
-  deathSpeed: {x: 0.5, y: 0}
+  deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
 --- !u!61 &602116525
@@ -1738,7 +1792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 5
-  deathSpeed: {x: 0.5, y: 0}
+  deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
 --- !u!61 &810288702
@@ -1885,7 +1939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  deathSpeed: {x: 0.5, y: 0}
+  deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
 --- !u!61 &969925277
@@ -2005,7 +2059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1021702737
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2079,7 +2133,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1021702736}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 1.56, y: 3.13, z: 0}
+  m_LocalPosition: {x: -6.1, y: 3.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 95804772}
@@ -2218,7 +2272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  deathSpeed: {x: 0.5, y: 0}
+  deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
 --- !u!61 &1102293181
@@ -2328,8 +2382,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1244680628}
   - component: {fileID: 1244680627}
+  - component: {fileID: 1244680629}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: InvisibleWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2382,7 +2437,7 @@ SpriteRenderer:
   m_Size: {x: 3, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1244680628
@@ -2399,6 +2454,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1244680629
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244680626}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 3}
+    newSize: {x: 3, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3}
+  m_EdgeRadius: 0
 --- !u!1 &1444357315
 GameObject:
   m_ObjectHideFlags: 0
@@ -2476,7 +2557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  deathSpeed: {x: 0.5, y: 0}
+  deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
 --- !u!61 &1526306213

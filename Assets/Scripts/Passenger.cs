@@ -3,7 +3,7 @@
 public class Passenger : MonoBehaviour
 {
 
-    public enum PassengerType { civilian };
+    public enum PassengerType { civilian, rightEngineer, leftEngineer, rightGunner, leftGunner, pilote };
     public PassengerType type;
 
     public Vector2 deathSpeed;
@@ -85,6 +85,9 @@ public class Passenger : MonoBehaviour
         else
         {
             rigidBody.velocity = deathSpeed;
+            YeetController.instance.yeetedPassenger = this.gameObject;
+            YeetController.instance.OnYeeted(type);
+            YeetController.instance.nbPassenger--;
         }
     }
 

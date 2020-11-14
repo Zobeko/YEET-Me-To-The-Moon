@@ -361,12 +361,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c40acb6143842fd48a94625632212d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 2
   health: 0
   acceleration: 20
   mvSpeed: 4
   drag: 15
   invulnerableDuration: 1
+  driftSpeed: 0
 --- !u!114 &385258539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,13 +617,14 @@ GameObject:
   - component: {fileID: 647768830}
   - component: {fileID: 647768829}
   - component: {fileID: 647768835}
+  - component: {fileID: 647768834}
   m_Layer: 0
   m_Name: Asteroid
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!58 &647768829
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -740,6 +742,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &647768834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647768828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fcfd212e06ab6245945e2556e866282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &647768835
 MonoBehaviour:
   m_ObjectHideFlags: 0

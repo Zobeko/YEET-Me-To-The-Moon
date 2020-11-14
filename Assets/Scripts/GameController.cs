@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public int totalCrew;
-    public int totalCivilians;
-    public int remainingCrew;
-    public int remainingCivilians;
+    public int totalCrew = 5;
+    public int totalCivilians = 4;
+    public int remainingCrew = 5;
+    public int remainingCivilians = 4;
+
+    private bool currentYeetStatus = false;
+    private bool previousYeetStatus = false;
 
     public float reversedControls = 1;
     public bool leftEngineerBool = true;
@@ -18,7 +22,7 @@ public class GameController : MonoBehaviour
     public GameObject[] waveArrayEasy;
     public GameObject[] waveArrayHard;
     
-    private int score;
+    private int score = 0;
 
     public static GameController instance;
 
@@ -44,7 +48,13 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //previousYeetStatus = currentYeetStatus;
+        //currentYeetStatus = YeetController.instance.isYeetActivated;
+        //if (previousYeetStatus == true && currentYeetStatus == false)
+        //{
+        //    OnPassengerYeet(YeetController.instance.yeetedPassengerType);
+        //    DestroyEnemies();
+        //}
     }
 
     public void OnEnemyDeath() //incremente le score sur la mort d'un ennemi 
@@ -53,15 +63,15 @@ public class GameController : MonoBehaviour
     }
 
     public class Passenger { public enum PassengerType {civilian, rightEngineer, leftEngineer, rightGunner, leftGunner, pilot}; public PassengerType type; } //placeholder
-    public void OnPassengerLoss(Passenger lostPassenger) // mets à jour les booléns et valeurs en fonction du passager yeete
+    public void OnPassengerYeet(Passenger.PassengerType yeetedPassengerType) // mets à jour les booléns et valeurs en fonction du passager yeete
     {
-        switch (lostPassenger.type)
+        switch (yeetedPassengerType)
         {
             case Passenger.PassengerType.civilian:
                 remainingCivilians -= 1;
                 if (remainingCivilians == 0)
                 {
-                    //game over
+                    SceneManager.LoadScene("GameOverScene", LoadSceneMode.Single);
                 }
                 return;
 
@@ -133,6 +143,14 @@ public class GameController : MonoBehaviour
             {
                 Instantiate(waveArrayHard[waveIndex]);
             }
+        }
+    }
+
+    public void DestroyEnemies() // Detruit tous les ennemis || ATTENTION A CE QUE CA NE DETRUISE PAS LES ENNEMIS FUTURS
+    {
+        foreach (GameObject ennemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            Destroy(ennemy);
         }
     }
         

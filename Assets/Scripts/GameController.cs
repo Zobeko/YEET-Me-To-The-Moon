@@ -28,6 +28,8 @@ public class GameController : MonoBehaviour
     
     public int score = 0;
 
+    public GameObject playerObject;
+
     public static GameController instance;
 
     IEnumerator StartGameCoroutine()
@@ -44,7 +46,7 @@ public class GameController : MonoBehaviour
         StartCoroutine("SpawnEnemyCoroutine");
     }
 
-private void Awake()
+    private void Awake()
     {
         if (instance != null && instance != this)
         {
@@ -60,6 +62,7 @@ private void Awake()
     // Start is called before the first frame update
     void Start()
     {
+        playerObject = GameObject.Find("PlayerShip");
         StartCoroutine("StartGameCoroutine");
         waveSpawnPoint = new Vector3(-4.5f, 0f, 0f);
     }

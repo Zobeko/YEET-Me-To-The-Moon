@@ -10,14 +10,22 @@ public class PlayerShipController : AbstractShip
     public float drag; 
     public float invulnerableDuration;
 
+    public float driftSpeed;
+
     private bool invulnerable = false;
 
     private Rigidbody2D rBody;
+    private GameController controller;
 
     protected void Awake()
     {
         base.Awake();
         rBody = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        controller = GameController.instance;
     }
 
     private void FixedUpdate()
@@ -31,7 +39,7 @@ public class PlayerShipController : AbstractShip
         float mvX = Convert.ToInt32(Input.GetKey("d")) - Convert.ToInt32(Input.GetKey("a"));
         float mvY = Convert.ToInt32(Input.GetKey("w")) - Convert.ToInt32(Input.GetKey("s"));
 
-        Vector2 mvDirection = new Vector2(mvX,mvY);
+        Vector2 mvDirection = new Vector2(mvX,mvY) * controller.reversedControls;
 
         if(mvDirection.magnitude > 0)
         {
@@ -42,6 +50,17 @@ public class PlayerShipController : AbstractShip
             //Le vaisseau ralentit grâce au drag
             rBody.velocity -= rBody.velocity.normalized * drag * Time.fixedDeltaTime;
         }
+
+        if (!controller.leftEngineerBool)
+        {
+            rBody.velocity = Vector3.ClampMagnitude(rBody.velocity - (Vector2) transform.right * driftSpeed, mvSpeed);
+        }
+
+        if (!controller.rightEngineerBool)
+        {
+            rBody.velocity = Vector3.ClampMagnitude(rBody.velocity + (Vector2)transform.right * driftSpeed, mvSpeed);
+        }
+
     }
 
     //Appelé lorsque des dégâts sont pris

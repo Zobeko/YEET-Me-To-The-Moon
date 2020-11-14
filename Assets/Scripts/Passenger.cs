@@ -32,12 +32,24 @@ public class Passenger : MonoBehaviour
     {
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if (isDragged)
-        {
-            transform.position = new Vector3(mousePosition.x, mousePosition.y, this.transform.position.z);
-        }
+        
 
         
+
+        if (isDragged)
+        {
+            if(YeetController.instance.yeetTimeScale < YeetController.instance.yeetDuration)
+            {
+                transform.position = new Vector3(mousePosition.x, mousePosition.y, this.transform.position.z);
+                
+            }
+            else
+            {
+                transform.position = initialPassengerPosition;
+                isDragged = false;
+            }
+        }
+
 
     }
 

@@ -66,11 +66,11 @@ public class YeetController : MonoBehaviour
 
  
 
-        if (yeetTimeScale >= yeetDuration || yeetedPassenger)
+        if (yeetTimeScale > yeetDuration + 0.1f || yeetedPassenger)
         {
+            
             if (!yeetedPassenger)
             {
-                //int i = Random.Range(0, array.Length);
                 array[initialNbPassenger - nbPassenger].GetComponent<Rigidbody2D>().velocity = defaultYeetSpeed;
                 array[initialNbPassenger - nbPassenger].GetComponent<Rigidbody2D>().velocity = defaultYeetSpeed;
                 yeetedPassengerType = array[initialNbPassenger - nbPassenger].GetComponent<Passenger>().type;

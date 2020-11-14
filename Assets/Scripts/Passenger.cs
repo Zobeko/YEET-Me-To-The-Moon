@@ -16,11 +16,14 @@ public class Passenger : MonoBehaviour
     private Vector3 mousePosition = Vector3.zero;
     private Vector2 initialPassengerPosition;
 
+    GameObject planeShip;
+
     void Start()
     {
         initialPassengerPosition = transform.position;
         rigidBody = this.GetComponent<Rigidbody2D>();
         spriteRenderer = this.GetComponent<SpriteRenderer>();
+        planeShip = GameObject.FindGameObjectsWithTag("PlaneShip")[0];
     }
 
 
@@ -65,22 +68,23 @@ public class Passenger : MonoBehaviour
     }
 
     //Permet de détecter quand le passenger est en dehors du vaisseau
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if(other.CompareTag("PlaneShip"))
-        {
-            isOutside = true;
-        }
-    }
+    //void OnTriggerExit2D(Collider2D other)
+    //{
+    //    if(other.CompareTag("PlaneShip"))
+    //    {
+    //        isOutside = true;
+    //        Debug.Log("ontrigger is true");
+    //    }
+    //}
 
     //Permet de détecter quand le passenger est dans du vaisseau
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("PlaneShip"))
-        {
-            isOutside = false;
-        }
-    }
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("PlaneShip"))
+    //    {
+    //        isOutside = false;
+    //    }
+    //}
 
 
     //Permet de savoir quand on drop le passenger 
@@ -89,7 +93,7 @@ public class Passenger : MonoBehaviour
         isDragged = false;
 
         //Si le passenger est droppé dans le vaisseau, alors il revient à se position initiale
-        if (!isOutside)
+        if (planeShip.GetComponent<Collider2D>().bounds.Contains((Vector2)(this.transform.position)))
         {
             transform.position = initialPassengerPosition;
         }

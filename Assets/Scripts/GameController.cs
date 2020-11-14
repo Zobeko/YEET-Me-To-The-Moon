@@ -21,15 +21,27 @@ public class GameController : MonoBehaviour
 
     public GameObject[] waveArrayEasy;
     public GameObject[] waveArrayHard;
+    private Vector3 waveSpawnPoint;
+
+    private float timeBetweenWave = 10f;
+    public float gameStartDate = 5f;
     
     public int score = 0;
 
     public static GameController instance;
 
+    IEnumerator StartGameCoroutine()
+    {
+        yield return new WaitForSeconds(10f);
+        print("Game started");
+        StartCoroutine("SpawnEnemyCoroutine");
+    }
+
     IEnumerator SpawnEnemyCoroutine()
     {
-        yield return new WaitForSeconds(1f);
         SpawnRandomWave(true);
+        yield return new WaitForSeconds(timeBetweenWave);
+        StartCoroutine("SpawnEnemyCoroutine");
     }
 
 private void Awake()
@@ -48,7 +60,8 @@ private void Awake()
     // Start is called before the first frame update
     void Start()
     {
-        SpawnEnemyCoroutine();
+        StartCoroutine("StartGameCoroutine");
+        waveSpawnPoint = new Vector3(-5f, 0f, 0f);
     }
 
     // Update is called once per frame
@@ -118,11 +131,11 @@ private void Awake()
     {
         if (isEasy)
         {
-            Instantiate(waveArrayEasy[Random.Range(0, waveArrayEasy.Length-1)]);
+            Instantiate(waveArrayEasy[Random.Range(0, waveArrayEasy.Length)], waveSpawnPoint, Quaternion.identity);
         }
         else
         {
-            Instantiate(waveArrayHard[Random.Range(0, waveArrayHard.Length - 1)]);
+            Instantiate(waveArrayHard[Random.Range(0, waveArrayHard.Length)], waveSpawnPoint, Quaternion.identity);
         }
     }
 
@@ -130,34 +143,34 @@ private void Awake()
     {
         if (isEasy)
         {
-            if (waveIndex > (waveArrayEasy.Length - 1))
+            if (waveIndex > (waveArrayEasy.Length))
             {
                 return;
             }
             else
             {
-                Instantiate(waveArrayEasy[waveIndex]);
+                Instantiate(waveArrayEasy[waveIndex], waveSpawnPoint, Quaternion.identity);
             }
         }
         else
         {
-            if (waveIndex > (waveArrayHard.Length - 1))
+            if (waveIndex > (waveArrayHard.Length))
             {
                 return;
             }
             else
             {
-                Instantiate(waveArrayHard[waveIndex]);
+                Instantiate(waveArrayHard[waveIndex], waveSpawnPoint, Quaternion.identity);
             }
         }
     }
 
     public void DestroyEnemies() // Detruit tous les ennemis || ATTENTION A CE QUE CA NE DETRUISE PAS LES ENNEMIS FUTURS
     {
-        foreach (GameObject ennemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
         {
-            Destroy(ennemy);
-            OnEnemyDeath();
+
+            Destroy(enemy);
         }
     }
         

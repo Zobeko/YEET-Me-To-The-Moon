@@ -34,6 +34,7 @@ public class EnemyShip : AbstractShip
         //Do stuff
         Debug.Log("death");
         Destroy(gameObject);
+        GameController.instance.OnEnemyDeath();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -50,7 +50,6 @@ public class YeetController : MonoBehaviour
             isYeetActivated = true;
         }
 
-        Debug.Log(Time.timeScale);
 
         if (isYeetActivated)
         {

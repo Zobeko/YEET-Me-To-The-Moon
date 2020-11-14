@@ -6,7 +6,7 @@ public abstract class AbstractShip : MonoBehaviour
 {
 
     public int maxHealth = 1;
-    protected int health;
+    public int health;
 
     protected void Awake()
     {

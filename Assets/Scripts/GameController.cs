@@ -124,11 +124,11 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void CountScore() //calcul final du score
+    /*public void CountScore() //calcul final du score
     {
         score -= (totalCivilians - remainingCivilians) * 1000;
         //score += playerShip.health * 300
-    } 
+    } */
 
     public void SpawnRandomWave(bool isEasy) //fais apparaîte une vague aléatoire
     {

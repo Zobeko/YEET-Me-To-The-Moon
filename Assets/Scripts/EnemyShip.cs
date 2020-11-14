@@ -45,6 +45,7 @@ public class EnemyShip : AbstractShip
         {
             Debug.Log("collision");
             OnDamageTaken(damager.damageValue);
+            Destroy(collision.gameObject);
         }
     }
 

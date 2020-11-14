@@ -102,6 +102,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 221.76999
       objectReference: {fileID: 0}
+    - target: {fileID: 1157093257559499419, guid: 741514c3b98d14e4a9cda0c17319e96c,
+        type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 741514c3b98d14e4a9cda0c17319e96c, type: 3}
 --- !u!4 &8450879879624725153 stripped
@@ -177,6 +182,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 501.88202
       objectReference: {fileID: 0}
+    - target: {fileID: 1157093257559499419, guid: 741514c3b98d14e4a9cda0c17319e96c,
+        type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 741514c3b98d14e4a9cda0c17319e96c, type: 3}
 --- !u!4 &8450879879654384856 stripped
@@ -200,7 +210,7 @@ PrefabInstance:
     - target: {fileID: 7112691311859329577, guid: a90f089d30eff66408f905a7ae213b1b,
         type: 3}
       propertyPath: maxHealth
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7112691311859329577, guid: a90f089d30eff66408f905a7ae213b1b,
         type: 3}
@@ -290,7 +300,7 @@ PrefabInstance:
     - target: {fileID: 7112691311859329577, guid: a90f089d30eff66408f905a7ae213b1b,
         type: 3}
       propertyPath: maxHealth
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7112691311859329577, guid: a90f089d30eff66408f905a7ae213b1b,
         type: 3}
@@ -380,7 +390,7 @@ PrefabInstance:
     - target: {fileID: 7112691311859329577, guid: a90f089d30eff66408f905a7ae213b1b,
         type: 3}
       propertyPath: maxHealth
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7112691311859329577, guid: a90f089d30eff66408f905a7ae213b1b,
         type: 3}

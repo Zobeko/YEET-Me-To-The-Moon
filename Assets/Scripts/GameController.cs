@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
 
     public GameObject[] waveArrayEasy;
     public GameObject[] waveArrayHard;
-    private Vector3 waveSpawnPoint;
+//    private Vector3 waveSpawnPoint;
 
     private float timeBetweenWave = 10f;
     public float gameStartDate = 5f;
@@ -61,7 +61,7 @@ private void Awake()
     void Start()
     {
         StartCoroutine("StartGameCoroutine");
-        waveSpawnPoint = new Vector3(-4.5f, 0f, 0f);
+        //waveSpawnPoint = new Vector3(-4.5f, 0f, 0f);
     }
 
     // Update is called once per frame
@@ -131,11 +131,47 @@ private void Awake()
     {
         if (isEasy)
         {
-            Instantiate(waveArrayEasy[Random.Range(0, waveArrayEasy.Length)], waveSpawnPoint, Quaternion.identity);
+            GameObject spawnedWaveObject = waveArrayEasy[Random.Range(0, waveArrayEasy.Length)];
+            Wave spawnedWave = spawnedWaveObject.GetComponent<Wave>();
+
+            switch (spawnedWave.waveType)
+            {
+                case (Wave.WaveType.SideArrival):
+                    spawnedWave.wavePosition = new Vector3(-12f, 8f, 0f);
+                    break;
+
+                case (Wave.WaveType.TopArrival):
+                    spawnedWave.wavePosition = new Vector3(-5f, 8f, 0f);
+                    break;
+
+                case (Wave.WaveType.ZoomArrival):
+                    spawnedWave.wavePosition = new Vector3(-5f, 3f, 0f);
+                    break;
+            }
+
+            Instantiate(spawnedWaveObject, spawnedWave.wavePosition, Quaternion.identity);
         }
         else
         {
-            Instantiate(waveArrayHard[Random.Range(0, waveArrayHard.Length)], waveSpawnPoint, Quaternion.identity);
+            GameObject spawnedWaveObject = waveArrayHard[Random.Range(0, waveArrayHard.Length)];
+            Wave spawnedWave = spawnedWaveObject.GetComponent<Wave>();
+
+            switch (spawnedWave.waveType)
+            {
+                case (Wave.WaveType.SideArrival):
+                    spawnedWave.wavePosition = new Vector3(-12f, 8f, 0f);
+                    break;
+
+                case (Wave.WaveType.TopArrival):
+                    spawnedWave.wavePosition = new Vector3(-5f, 8f, 0f);
+                    break;
+
+                case (Wave.WaveType.ZoomArrival):
+                    spawnedWave.wavePosition = new Vector3(-5f, 3f, 0f);
+                    break;
+            }
+
+            Instantiate(spawnedWaveObject, spawnedWave.wavePosition, Quaternion.identity);
         }
     }
 
@@ -149,7 +185,9 @@ private void Awake()
             }
             else
             {
-                Instantiate(waveArrayEasy[waveIndex], waveSpawnPoint, Quaternion.identity);
+                GameObject spawnedWaveObject = waveArrayEasy[Random.Range(0, waveArrayEasy.Length)];
+                Wave spawnedWave = spawnedWaveObject.GetComponent<Wave>();
+                Instantiate(spawnedWaveObject, spawnedWave.wavePosition, Quaternion.identity);
             }
         }
         else
@@ -160,7 +198,9 @@ private void Awake()
             }
             else
             {
-                Instantiate(waveArrayHard[waveIndex], waveSpawnPoint, Quaternion.identity);
+                GameObject spawnedWaveObject = waveArrayHard[Random.Range(0, waveArrayHard.Length)];
+                Wave spawnedWave = spawnedWaveObject.GetComponent<Wave>();
+                Instantiate(spawnedWaveObject, spawnedWave.wavePosition, Quaternion.identity);
             }
         }
     }
@@ -169,7 +209,7 @@ private void Awake()
     {
         foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
         {
-
+        
             Destroy(enemy);
         }
     }

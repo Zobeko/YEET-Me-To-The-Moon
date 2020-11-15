@@ -417,6 +417,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &132892006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 132892007}
+  - component: {fileID: 132892008}
+  m_Layer: 0
+  m_Name: RightAngledShooter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &132892007
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132892006}
+  m_LocalRotation: {x: 0, y: 0, z: -0.13052624, w: 0.9914449}
+  m_LocalPosition: {x: 0.3039999, y: 0.117, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1226644708}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15}
+--- !u!114 &132892008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132892006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb4bd08caba16343b6f81d2c942e3d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 0.8
+  bulletSpeed: 10
+  bulletPrefab: {fileID: 6765492423124477628, guid: eced0d33380850f44b63b6beaa3d0c1e,
+    type: 3}
+  shooterList:
+  - {fileID: 132892006}
 --- !u!1 &155769562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,6 +1757,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &464359703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 464359704}
+  - component: {fileID: 464359705}
+  m_Layer: 0
+  m_Name: LeftAngledShooter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &464359704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464359703}
+  m_LocalRotation: {x: 0, y: 0, z: 0.13052616, w: 0.9914449}
+  m_LocalPosition: {x: -0.3039999, y: 0.117, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1226644708}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15}
+--- !u!114 &464359705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464359703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb4bd08caba16343b6f81d2c942e3d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 0.8
+  bulletSpeed: 10
+  bulletPrefab: {fileID: 6765492423124477628, guid: eced0d33380850f44b63b6beaa3d0c1e,
+    type: 3}
+  shooterList:
+  - {fileID: 464359703}
 --- !u!1 &484053137
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,6 +2343,12 @@ CanvasRenderer:
 --- !u!1 &1226644702 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3264631552275794456, guid: 127ed02f8d9aee346b92851aa1072ca4,
+    type: 3}
+  m_PrefabInstance: {fileID: 3264631552026926654}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1226644708 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3264631552275794454, guid: 127ed02f8d9aee346b92851aa1072ca4,
     type: 3}
   m_PrefabInstance: {fileID: 3264631552026926654}
   m_PrefabAsset: {fileID: 0}

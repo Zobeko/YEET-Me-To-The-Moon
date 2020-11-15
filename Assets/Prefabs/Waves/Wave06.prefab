@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wavePosition: {x: 0, y: 0, z: 0}
-  waveType: 2
+  waveType: 1
 --- !u!1001 &499564062829586632
 PrefabInstance:
   m_ObjectHideFlags: 0

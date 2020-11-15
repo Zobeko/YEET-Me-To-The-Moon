@@ -10,6 +10,9 @@ public class GameController : MonoBehaviour
     public int remainingCrew = 5;
     public int remainingCivilians = 4;
 
+    public int waveNumber;
+    private int currentWave = 0;
+
     private bool currentYeetStatus = false;
     private bool previousYeetStatus = false;
 
@@ -44,10 +47,18 @@ public class GameController : MonoBehaviour
 
     IEnumerator SpawnEnemyCoroutine()
     {
-        SpawnFixedWave(true, waveIndex);
-        yield return new WaitForSeconds(delayBetweenWaves[waveIndex]);
-        waveIndex++;
-        StartCoroutine("SpawnEnemyCoroutine");
+        if (currentWave < waveNumber-1)
+        {
+            SpawnFixedWave(true, waveIndex);
+            yield return new WaitForSeconds(delayBetweenWaves[waveIndex]);
+            waveIndex++;
+            currentWave++;
+            StartCoroutine("SpawnEnemyCoroutine");
+        }
+        else
+        {
+            SceneManager.LoadScene("VictoryScene");
+        }
     }
 
 private void Awake()

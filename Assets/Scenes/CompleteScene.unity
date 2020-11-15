@@ -4535,6 +4535,7 @@ MonoBehaviour:
   totalCivilians: 4
   remainingCrew: 5
   remainingCivilians: 4
+  waveNumber: 10
   reversedControls: 1
   leftEngineerBool: 1
   rightEngineerBool: 1

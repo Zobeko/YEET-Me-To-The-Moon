@@ -152,6 +152,8 @@ MonoBehaviour:
   maxHealth: 1
   health: 0
   delayBeforeFiring: 2
+  explosionAudioClip: {fileID: 0}
+  hitAudioClip: {fileID: 0}
 --- !u!212 &3500305093084328957
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -220,7 +222,17 @@ MonoBehaviour:
   bulletSpeed: 3
   bulletPrefab: {fileID: 6765492423124477628, guid: bbe0685160b092047beccaed28080bac,
     type: 3}
-  shooterList: []
+  shooterList:
+  - {fileID: 3500305093263573317}
+  - {fileID: 3500305093270823118}
+  - {fileID: 3500305093561575436}
+  - {fileID: 3500305091836790265}
+  - {fileID: 3500305093516733998}
+  - {fileID: 3500305092687049514}
+  - {fileID: 3500305093171447912}
+  - {fileID: 3500305092798012502}
+  - {fileID: 3500305093661762762}
+  fireAudioClip: {fileID: 0}
 --- !u!114 &3500305093084328954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +255,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

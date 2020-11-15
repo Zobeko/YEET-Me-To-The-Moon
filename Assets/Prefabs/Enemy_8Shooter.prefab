@@ -276,7 +276,7 @@ MonoBehaviour:
   burstAmount: 1
   burstCooldown: 0
   bulletSpeed: 3
-  bulletPrefab: {fileID: 6765492423124477628, guid: 27cc31a21716a0d448c770723823091c,
+  bulletPrefab: {fileID: 6765492423124477628, guid: bbe0685160b092047beccaed28080bac,
     type: 3}
   shooterList:
   - {fileID: 7112691312527001500}

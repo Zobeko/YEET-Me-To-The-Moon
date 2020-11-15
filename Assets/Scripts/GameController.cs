@@ -21,12 +21,13 @@ public class GameController : MonoBehaviour
 
     public GameObject[] waveArrayEasy;
     public GameObject[] waveArrayHard;
+    public float[] delayBetweenWaves;
     private Vector3 waveSpawnPoint;
 
-    private float timeBetweenWave = 10f;
     public float gameStartDate = 5f;
     
     public int score = 0;
+    public int waveIndex = 0;
 
     public GameObject playerObject;
 
@@ -41,8 +42,10 @@ public class GameController : MonoBehaviour
 
     IEnumerator SpawnEnemyCoroutine()
     {
-        SpawnRandomWave(true);
-        yield return new WaitForSeconds(timeBetweenWave);
+
+        SpawnFixedWave(true, waveIndex);
+        yield return new WaitForSeconds(delayBetweenWaves[waveIndex]);
+        waveIndex++;
         StartCoroutine("SpawnEnemyCoroutine");
     }
 
@@ -52,10 +55,9 @@ public class GameController : MonoBehaviour
         {
             Destroy(instance);
         }
-        else
-        {
-            instance = this;
-        }
+        
+        instance = this;
+        
     }
 
 

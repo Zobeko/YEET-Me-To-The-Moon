@@ -447,6 +447,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  nbInitialCivilians: 0
+  nbRemainingCivilians: 0
 --- !u!4 &149124066
 Transform:
   m_ObjectHideFlags: 0
@@ -3440,8 +3442,18 @@ MonoBehaviour:
   - {fileID: 3976787060239443054, guid: c2a404d0fcd8fbc44b33733f242bee27, type: 3}
   - {fileID: 3396653152954974886, guid: 0d49913e5bf283e41984fa539d144e9c, type: 3}
   waveArrayHard: []
+  delayBetweenWaves:
+  - 5
+  - 1
+  - 20
+  - 1
+  - 10
+  - 1
+  - 1
   gameStartDate: 0
   score: 0
+  waveIndex: 0
+  playerObject: {fileID: 0}
 --- !u!4 &1968125122
 Transform:
   m_ObjectHideFlags: 0

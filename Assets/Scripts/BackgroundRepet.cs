@@ -34,7 +34,7 @@ public class BackgroundRepet : MonoBehaviour
 
     void Reposition()
     {
-        Vector2 vector = new Vector2(0, 2f*length);
+        Vector3 vector = new Vector3(0, 2f*length,0);
         transform.position += vector;
     }
 }

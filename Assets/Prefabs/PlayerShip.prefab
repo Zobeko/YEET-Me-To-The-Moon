@@ -413,6 +413,7 @@ MonoBehaviour:
   playerExplosionClip: {fileID: 8300000, guid: de71e70f26b578244a79278ee280538e, type: 3}
   playerLowHealthClip: {fileID: 8300000, guid: 8d078f7204f13ec4c84c57e36993667f, type: 3}
   isHealthLow: 1
+  mainRenderer: {fileID: 3264631552275794457}
 --- !u!50 &3264631552275794455
 Rigidbody2D:
   serializedVersion: 4

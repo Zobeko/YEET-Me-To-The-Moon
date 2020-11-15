@@ -203,7 +203,7 @@ private void Awake()
             }
             else
             {
-                GameObject spawnedWaveObject = waveArrayEasy[Random.Range(0, waveArrayEasy.Length)];
+                GameObject spawnedWaveObject = waveArrayEasy[waveIndex];
                 Wave spawnedWave = spawnedWaveObject.GetComponent<Wave>();
                 Instantiate(spawnedWaveObject, spawnedWave.wavePosition, Quaternion.identity);
             }

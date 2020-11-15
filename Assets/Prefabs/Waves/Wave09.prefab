@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7853848260932690440}
   m_Layer: 0
-  m_Name: Wave9
+  m_Name: Wave09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,12 +52,12 @@ PrefabInstance:
     - target: {fileID: 7112691311859329582, guid: a90f089d30eff66408f905a7ae213b1b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2670684
+      value: 1.9370193
       objectReference: {fileID: 0}
     - target: {fileID: 7112691311859329582, guid: a90f089d30eff66408f905a7ae213b1b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8773143
+      value: 1.569958
       objectReference: {fileID: 0}
     - target: {fileID: 7112691311859329582, guid: a90f089d30eff66408f905a7ae213b1b,
         type: 3}
@@ -132,12 +132,12 @@ PrefabInstance:
     - target: {fileID: 7112691311859329582, guid: a90f089d30eff66408f905a7ae213b1b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.3340883
+      value: -2.13
       objectReference: {fileID: 0}
     - target: {fileID: 7112691311859329582, guid: a90f089d30eff66408f905a7ae213b1b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.7873564
+      value: 2.48
       objectReference: {fileID: 0}
     - target: {fileID: 7112691311859329582, guid: a90f089d30eff66408f905a7ae213b1b,
         type: 3}

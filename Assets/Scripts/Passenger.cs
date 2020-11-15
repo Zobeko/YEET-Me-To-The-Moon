@@ -16,6 +16,9 @@ public class Passenger : MonoBehaviour
     private Vector3 mousePosition = Vector3.zero;
     private Vector2 initialPassengerPosition;
 
+    private AudioSource audioSource = null;
+    public AudioClip[] audioClipArray = null;
+
     GameObject planeShip;
 
     void Start()
@@ -23,6 +26,7 @@ public class Passenger : MonoBehaviour
         initialPassengerPosition = transform.position;
         rigidBody = this.GetComponent<Rigidbody2D>();
         spriteRenderer = this.GetComponent<SpriteRenderer>();
+        audioSource = this.GetComponent<AudioSource>();
         planeShip = GameObject.FindGameObjectsWithTag("PlaneShip")[0];
     }
 
@@ -104,6 +108,10 @@ public class Passenger : MonoBehaviour
             YeetController.instance.yeetedPassenger = this.gameObject;
             YeetController.instance.OnYeeted(type);
             YeetController.instance.nbPassenger--;
+
+            int audioClipIndex = Random.Range(0, audioClipArray.Length);
+            audioSource.PlayOneShot(audioClipArray[audioClipIndex]);
+            
         }
     }
 

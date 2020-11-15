@@ -9,7 +9,8 @@ public class YeetController : MonoBehaviour
 
     public GameObject yeetedPassenger = null;
 
-    public bool isYeetActivated = false;
+    public bool isYeetActivated;
+    
 
     public int initialNbPassenger;
     public int nbPassenger;
@@ -20,12 +21,17 @@ public class YeetController : MonoBehaviour
 
     public Passenger.PassengerType yeetedPassengerType;
 
+    private AudioSource audioSource = null;
+    [SerializeField] private AudioClip[] passengerDeathClipArray = null;
+    [SerializeField] private AudioClip yeetActivationClip = null;
+
     void Start()
     {
         Cursor.visible = false;
         Time.timeScale = 1f;
 
         nbPassenger = initialNbPassenger;
+        audioSource = this.GetComponent<AudioSource>();
     }
 
 
@@ -48,6 +54,7 @@ public class YeetController : MonoBehaviour
         if (Input.GetButtonDown("Yeet"))
         {
             isYeetActivated = true;
+            audioSource.PlayOneShot(yeetActivationClip);
         }
 
 
@@ -60,6 +67,8 @@ public class YeetController : MonoBehaviour
 
     private void Yeet()
     {
+        
+
         Time.timeScale = 0.05f;
         Cursor.visible = true;
         yeetTimeScale += Time.deltaTime * 20 ;
@@ -72,9 +81,10 @@ public class YeetController : MonoBehaviour
             if (!yeetedPassenger)
             {
                 array[initialNbPassenger - nbPassenger].GetComponent<Rigidbody2D>().velocity = defaultYeetSpeed;
-                array[initialNbPassenger - nbPassenger].GetComponent<Rigidbody2D>().velocity = defaultYeetSpeed;
+                //array[initialNbPassenger - nbPassenger].GetComponent<Rigidbody2D>().velocity = defaultYeetSpeed;
                 yeetedPassengerType = array[initialNbPassenger - nbPassenger].GetComponent<Passenger>().type;
                 nbPassenger--;
+                audioSource.PlayOneShot(passengerDeathClipArray[Random.Range(0, passengerDeathClipArray.Length)]);
             }
             isYeetActivated = false;
             yeetTimeScale = 0f;

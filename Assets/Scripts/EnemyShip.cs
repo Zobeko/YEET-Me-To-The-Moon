@@ -11,6 +11,7 @@ public class EnemyShip : AbstractShip
     public AudioClip hitAudioClip = null;
     private AudioSource audioSource = null;
 
+    public SpriteRenderer mainRenderer;
 
     protected void Awake()
     {
@@ -28,12 +29,22 @@ public class EnemyShip : AbstractShip
     {
         audioSource.PlayOneShot(hitAudioClip);
         health -= amount;
+        StartCoroutine("colliderFlash");
         if (health <= 0)
         {
             OnDeath();
             Debug.Log("damageTaken");
             return;
         }
+    }
+
+    IEnumerator collideFlash()
+    {
+
+        Color c = mainRenderer.color;
+        mainRenderer.color = Color.white;
+        yield return new WaitForSeconds(0.1f);
+        mainRenderer.material.color = c;
     }
 
     protected override void OnDeath()

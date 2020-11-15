@@ -56,6 +56,7 @@ MonoBehaviour:
   delayBeforeFiring: 0.5
   explosionAudioClip: {fileID: 8300000, guid: de71e70f26b578244a79278ee280538e, type: 3}
   hitAudioClip: {fileID: 8300000, guid: 5786beb734090014891178b466c86f4f, type: 3}
+  mainRenderer: {fileID: 2857992028856864132}
   mvSpeed: 2
 --- !u!212 &2857992028856864132
 SpriteRenderer:
@@ -253,7 +254,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 4
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -801,7 +802,7 @@ ParticleSystem:
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0.5
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -884,7 +885,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.5
+      value: 0.2
       mode: 0
       spread: 0
       speed:

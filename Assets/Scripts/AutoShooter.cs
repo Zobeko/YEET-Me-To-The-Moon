@@ -6,24 +6,25 @@ public class AutoShooter : MonoBehaviour
 {
 
     public float fireRate;
+    public int burstAmount;
+    public float burstCooldown;
     public float bulletSpeed;
     public GameObject bulletPrefab;
     public GameObject[] shooterList;
 
     private float currentCooldown = 0;
     private bool unajusted = false;
+    private bool inBurst = false;
 
     private void Update()
     {
-
-        if(currentCooldown <= 0)
-        {
-            Shoot();
-        } else
+        if (currentCooldown > 0)
         {
             currentCooldown -= Time.deltaTime;
+        } else if (!inBurst)
+        {
+            StartCoroutine(FireBurst());
         }
-        
     }
 
     private void Shoot()
@@ -37,19 +38,32 @@ public class AutoShooter : MonoBehaviour
             instantiated.GetComponent<Rigidbody2D>().velocity = shooter.transform.up*bulletSpeed;
         }
 
-        if (!unajusted)
-        {
-            currentCooldown = fireRate;
-        } else
-        {
-            currentCooldown = fireRate + Random.Range(-0.2f, 0.2f);
-        }
-
     }
 
     public void Unajust()
     {
         unajusted = true;
+    }
+
+    IEnumerator FireBurst()
+    {
+        inBurst = true;
+        for(int i = 0; i < burstAmount; i++)
+        {
+            Shoot();
+
+            if (!unajusted)
+            {
+                yield return new WaitForSeconds(fireRate);
+            }
+            else
+            {
+                yield return new WaitForSeconds(fireRate + Random.Range(-0.2f, 0.2f));
+            }
+        }
+
+        inBurst = false;
+        currentCooldown = burstCooldown;
     }
 
 }

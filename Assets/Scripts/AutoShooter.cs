@@ -16,6 +16,15 @@ public class AutoShooter : MonoBehaviour
     private bool unajusted = false;
     private bool inBurst = false;
 
+    private AudioSource audioSource = null;
+    public AudioClip fireAudioClip = null;
+
+
+    void Awake()
+    {
+        audioSource = this.gameObject.GetComponent<AudioSource>();
+    }
+
     private void Update()
     {
         if (currentCooldown > 0)
@@ -34,6 +43,7 @@ public class AutoShooter : MonoBehaviour
         //On fait le tour des shooters passes par l'inspecteur et on tire
         foreach (GameObject shooter in shooterList)
         {
+            audioSource.PlayOneShot(fireAudioClip);
             instantiated = Instantiate(bulletPrefab, shooter.transform.position, shooter.transform.rotation);
             instantiated.GetComponent<Rigidbody2D>().velocity = shooter.transform.up*bulletSpeed;
         }

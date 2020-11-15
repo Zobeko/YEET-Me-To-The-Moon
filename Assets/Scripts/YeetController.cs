@@ -28,6 +28,7 @@ public class YeetController : MonoBehaviour
 
 
     public CanvasGroup myCG;
+    public GameObject Panel;
     private bool flash = false;
 
     void Start()
@@ -75,6 +76,7 @@ public class YeetController : MonoBehaviour
             if (myCG.alpha <= 0)
             {
                 myCG.alpha = 0;
+                
                 flash = false;
             }
         }
@@ -95,6 +97,7 @@ public class YeetController : MonoBehaviour
         if (yeetTimeScale > yeetDuration + 0.1f || yeetedPassenger)
         {
             flash = true;
+            
             myCG.alpha = 1;
 
             if (!yeetedPassenger)

@@ -156,6 +156,7 @@ MonoBehaviour:
     type: 3}
   shooterList:
   - {fileID: 1157093257168375210}
+  fireAudioClip: {fileID: 8300000, guid: 0ab833eea2102d043a5df30ab6262306, type: 3}
 --- !u!50 &1157093257559499420
 Rigidbody2D:
   serializedVersion: 4

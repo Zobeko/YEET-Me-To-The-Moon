@@ -290,6 +290,7 @@ MonoBehaviour:
   - {fileID: 7112691310879221960}
   - {fileID: 7112691311004344199}
   - {fileID: 7112691311326570504}
+  fireAudioClip: {fileID: 8300000, guid: 0ab833eea2102d043a5df30ab6262306, type: 3}
 --- !u!50 &7112691311859329578
 Rigidbody2D:
   serializedVersion: 4

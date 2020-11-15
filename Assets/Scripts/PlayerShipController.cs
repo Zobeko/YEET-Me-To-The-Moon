@@ -27,6 +27,8 @@ public class PlayerShipController : AbstractShip
     public AudioClip playerLowHealthClip = null;
     public bool isHealthLow = true;
 
+    public SpriteRenderer mainRenderer;
+
     protected void Awake()
     {
         base.Awake();
@@ -121,7 +123,17 @@ public class PlayerShipController : AbstractShip
             }
             invulnerable = true;
             StartCoroutine(InvulnerableTimeCoroutine());
+            StartCoroutine("colliderFlash");
         }
+    }
+
+    IEnumerator collideFlash()
+    {
+        
+        Color c = mainRenderer.color;
+        mainRenderer.color = Color.white;
+        yield return new WaitForSeconds(0.1f);
+        mainRenderer.material.color = c;
     }
 
     protected override void OnDeath()

@@ -7,6 +7,10 @@ public class EnemyShip : AbstractShip
 
     public float delayBeforeFiring = 0.5f;
 
+    public AudioClip explosionAudioClip = null;
+    public AudioClip hitAudioClip = null;
+    private AudioSource audioSource = null;
+
 
     protected void Awake()
     {
@@ -15,11 +19,14 @@ public class EnemyShip : AbstractShip
             GetComponent<AutoShooter>().enabled = false;
             StartCoroutine(WaitBeforeFiring());
         }
+
+        audioSource = this.gameObject.GetComponent<AudioSource>();
     }
 
 
     public override void OnDamageTaken(int amount)
     {
+        audioSource.PlayOneShot(hitAudioClip);
         health -= amount;
         if (health <= 0)
         {
@@ -32,6 +39,7 @@ public class EnemyShip : AbstractShip
     protected override void OnDeath()
     {
         Debug.Log("death");
+        audioSource.PlayOneShot(explosionAudioClip);
         ParticleSystem explosion = GetComponent<ParticleSystem>();
         explosion.Play();
         Destroy(gameObject, explosion.main.duration);

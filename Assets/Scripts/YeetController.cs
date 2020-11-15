@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class YeetController : MonoBehaviour
 {
@@ -24,6 +25,10 @@ public class YeetController : MonoBehaviour
     private AudioSource audioSource = null;
     [SerializeField] private AudioClip[] passengerDeathClipArray = null;
     [SerializeField] private AudioClip yeetActivationClip = null;
+
+
+    public CanvasGroup myCG;
+    private bool flash = false;
 
     void Start()
     {
@@ -62,6 +67,17 @@ public class YeetController : MonoBehaviour
         {
             Yeet();
         }
+
+        if (flash) //Pour le flash
+        {
+
+            myCG.alpha = myCG.alpha - Time.deltaTime;
+            if (myCG.alpha <= 0)
+            {
+                myCG.alpha = 0;
+                flash = false;
+            }
+        }
     }
 
 
@@ -77,7 +93,9 @@ public class YeetController : MonoBehaviour
 
         if (yeetTimeScale > yeetDuration + 0.1f || yeetedPassenger)
         {
-            
+            flash = true;
+            myCG.alpha = 1;
+
             if (!yeetedPassenger)
             {
                 array[initialNbPassenger - nbPassenger].GetComponent<Rigidbody2D>().velocity = defaultYeetSpeed;
@@ -85,6 +103,8 @@ public class YeetController : MonoBehaviour
                 yeetedPassengerType = array[initialNbPassenger - nbPassenger].GetComponent<Passenger>().type;
                 nbPassenger--;
                 audioSource.PlayOneShot(passengerDeathClipArray[Random.Range(0, passengerDeathClipArray.Length)]);
+
+
             }
             isYeetActivated = false;
             yeetTimeScale = 0f;

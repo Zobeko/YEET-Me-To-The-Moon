@@ -21,6 +21,12 @@ public class PlayerShipController : AbstractShip
     private Rigidbody2D rBody;
     private GameController controller;
 
+    public AudioSource audioSourceLowHealth = null;
+    public AudioSource audioSourceEffects = null;
+    public AudioClip playerExplosionClip = null;
+    public AudioClip playerLowHealthClip = null;
+    public bool isHealthLow = true;
+
     protected void Awake()
     {
         base.Awake();
@@ -52,6 +58,16 @@ public class PlayerShipController : AbstractShip
             }
         }
 
+        
+        
+        if (health <= 0.25 * maxHealth && isHealthLow){
+            isHealthLow = false;
+            StartCoroutine(LowHealthSoudCoroutine());
+        }
+        else
+        {
+            StopCoroutine(LowHealthSoudCoroutine());
+        }
     }
 
     private void FixedUpdate()
@@ -93,9 +109,11 @@ public class PlayerShipController : AbstractShip
     //Appelé lorsque des dégâts sont pris
     public override void OnDamageTaken(int amount)
     {
+        audioSourceEffects.PlayOneShot(playerExplosionClip);
         if (!invulnerable)
         {
             health -= amount;
+            
             if (health <= 0)
             {
                 OnDeath();
@@ -110,6 +128,7 @@ public class PlayerShipController : AbstractShip
     {
         SceneManager.LoadScene("GameOverScene");
         Destroy(gameObject);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -127,6 +146,13 @@ public class PlayerShipController : AbstractShip
     {
         yield return new WaitForSeconds(invulnerableDuration);
         invulnerable = false;
+    }
+
+    IEnumerator LowHealthSoudCoroutine()
+    {
+        audioSourceLowHealth.PlayOneShot(playerLowHealthClip);
+        yield return new WaitForSeconds(4.3f);
+        isHealthLow = true;
     }
 
 }

@@ -31,9 +31,10 @@ public class EnemyShip : AbstractShip
 
     protected override void OnDeath()
     {
-        //Do stuff
         Debug.Log("death");
-        Destroy(gameObject);
+        ParticleSystem explosion = GetComponent<ParticleSystem>();
+        explosion.Play();
+        Destroy(gameObject, explosion.main.duration);
         GameController.instance.OnEnemyDeath();
     }
 

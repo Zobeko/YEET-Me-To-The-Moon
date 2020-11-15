@@ -145,7 +145,7 @@ private void Awake()
                     break;
 
                 case (Wave.WaveType.ZoomArrival):
-                    spawnedWave.wavePosition = new Vector3(-5f, 3f, 0f);
+                    spawnedWave.wavePosition = new Vector3(-5f, 0f, 0f);
                     break;
             }
 
@@ -159,15 +159,15 @@ private void Awake()
             switch (spawnedWave.waveType)
             {
                 case (Wave.WaveType.SideArrival):
-                    spawnedWave.wavePosition = new Vector3(-12f, 8f, 0f);
+                    spawnedWave.wavePosition = new Vector3(-12f, 5f, 0f);
                     break;
 
                 case (Wave.WaveType.TopArrival):
-                    spawnedWave.wavePosition = new Vector3(-5f, 8f, 0f);
+                    spawnedWave.wavePosition = new Vector3(-5f, 5f, 0f);
                     break;
 
                 case (Wave.WaveType.ZoomArrival):
-                    spawnedWave.wavePosition = new Vector3(-5f, 3f, 0f);
+                    spawnedWave.wavePosition = new Vector3(-5f, 0f, 0f);
                     break;
             }
 

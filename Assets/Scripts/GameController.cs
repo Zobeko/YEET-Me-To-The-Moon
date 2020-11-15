@@ -21,12 +21,17 @@ public class GameController : MonoBehaviour
 
     public GameObject[] waveArrayEasy;
     public GameObject[] waveArrayHard;
-//    private Vector3 waveSpawnPoint;
+    public float[] delayBetweenWaves;
+
+    //    private Vector3 waveSpawnPoint;
 
     private float timeBetweenWave = 10f;
     public float gameStartDate = 5f;
     
     public int score = 0;
+    public int waveIndex = 0;
+
+    public GameObject playerObject;
 
     public static GameController instance;
 
@@ -39,8 +44,9 @@ public class GameController : MonoBehaviour
 
     IEnumerator SpawnEnemyCoroutine()
     {
-        SpawnRandomWave(true);
-        yield return new WaitForSeconds(timeBetweenWave);
+        SpawnFixedWave(true, waveIndex);
+        yield return new WaitForSeconds(delayBetweenWaves[waveIndex]);
+        waveIndex++;
         StartCoroutine("SpawnEnemyCoroutine");
     }
 
@@ -60,6 +66,7 @@ private void Awake()
     // Start is called before the first frame update
     void Start()
     {
+        playerObject = GameObject.Find("PlayerShip");
         StartCoroutine("StartGameCoroutine");
         //waveSpawnPoint = new Vector3(-4.5f, 0f, 0f);
     }

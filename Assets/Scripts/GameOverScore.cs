@@ -14,14 +14,12 @@ public class GameOverScore : MonoBehaviour
     {
         scoreKeeper = GameObject.Find("ScoreKeeper");
         scoreKeeperScript = scoreKeeper.GetComponent<ScoreKeeper>();
-
+        score = scoreKeeperScript.score;
         score -= (scoreKeeperScript.nbInitialCivilians - scoreKeeperScript.nbRemainingCivilians) * 1000;
-
-        
-    }
-
-    void Update()
-    {
         this.gameObject.GetComponent<Text>().text = score.ToString();
     }
+
+    //void Update()
+    //{
+    //}
 }

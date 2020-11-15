@@ -246,12 +246,14 @@ MonoBehaviour:
   deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
-  audioClipArray: [{fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3},
-    {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}, {fileID: 8300000,
-      guid: 76ead13a7c261a94b971192104909754, type: 3}, {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1,
-      type: 3}, {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3},
-    {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}, {fileID: 8300000,
-      guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}]
+  audioClipArray:
+  - {fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3}
+  - {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}
+  - {fileID: 8300000, guid: 76ead13a7c261a94b971192104909754, type: 3}
+  - {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1, type: 3}
+  - {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3}
+  - {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}
+  - {fileID: 8300000, guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}
 --- !u!61 &39930950
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -744,12 +746,14 @@ MonoBehaviour:
   deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
-  audioClipArray: [{fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3},
-    {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}, {fileID: 8300000,
-      guid: 76ead13a7c261a94b971192104909754, type: 3}, {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1,
-      type: 3}, {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3},
-    {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}, {fileID: 8300000,
-      guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}]
+  audioClipArray:
+  - {fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3}
+  - {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}
+  - {fileID: 8300000, guid: 76ead13a7c261a94b971192104909754, type: 3}
+  - {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1, type: 3}
+  - {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3}
+  - {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}
+  - {fileID: 8300000, guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}
 --- !u!61 &155769565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -994,12 +998,14 @@ MonoBehaviour:
   deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
-  audioClipArray: [{fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3},
-    {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}, {fileID: 8300000,
-      guid: 76ead13a7c261a94b971192104909754, type: 3}, {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1,
-      type: 3}, {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3},
-    {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}, {fileID: 8300000,
-      guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}]
+  audioClipArray:
+  - {fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3}
+  - {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}
+  - {fileID: 8300000, guid: 76ead13a7c261a94b971192104909754, type: 3}
+  - {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1, type: 3}
+  - {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3}
+  - {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}
+  - {fileID: 8300000, guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}
 --- !u!61 &169691487
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1244,12 +1250,14 @@ MonoBehaviour:
   deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
-  audioClipArray: [{fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3},
-    {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}, {fileID: 8300000,
-      guid: 76ead13a7c261a94b971192104909754, type: 3}, {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1,
-      type: 3}, {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3},
-    {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}, {fileID: 8300000,
-      guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}]
+  audioClipArray:
+  - {fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3}
+  - {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}
+  - {fileID: 8300000, guid: 76ead13a7c261a94b971192104909754, type: 3}
+  - {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1, type: 3}
+  - {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3}
+  - {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}
+  - {fileID: 8300000, guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}
 --- !u!61 &174292968
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2131,12 +2139,14 @@ MonoBehaviour:
   deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
-  audioClipArray: [{fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3},
-    {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}, {fileID: 8300000,
-      guid: 76ead13a7c261a94b971192104909754, type: 3}, {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1,
-      type: 3}, {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3},
-    {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}, {fileID: 8300000,
-      guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}]
+  audioClipArray:
+  - {fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3}
+  - {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}
+  - {fileID: 8300000, guid: 76ead13a7c261a94b971192104909754, type: 3}
+  - {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1, type: 3}
+  - {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3}
+  - {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}
+  - {fileID: 8300000, guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}
 --- !u!61 &275733617
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2577,12 +2587,14 @@ MonoBehaviour:
   deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
-  audioClipArray: [{fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3},
-    {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}, {fileID: 8300000,
-      guid: 76ead13a7c261a94b971192104909754, type: 3}, {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1,
-      type: 3}, {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3},
-    {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}, {fileID: 8300000,
-      guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}]
+  audioClipArray:
+  - {fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3}
+  - {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}
+  - {fileID: 8300000, guid: 76ead13a7c261a94b971192104909754, type: 3}
+  - {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1, type: 3}
+  - {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3}
+  - {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}
+  - {fileID: 8300000, guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}
 --- !u!61 &602116525
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2995,12 +3007,14 @@ MonoBehaviour:
   deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
-  audioClipArray: [{fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3},
-    {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}, {fileID: 8300000,
-      guid: 76ead13a7c261a94b971192104909754, type: 3}, {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1,
-      type: 3}, {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3},
-    {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}, {fileID: 8300000,
-      guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}]
+  audioClipArray:
+  - {fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3}
+  - {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}
+  - {fileID: 8300000, guid: 76ead13a7c261a94b971192104909754, type: 3}
+  - {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1, type: 3}
+  - {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3}
+  - {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}
+  - {fileID: 8300000, guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}
 --- !u!61 &810288702
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3583,12 +3597,14 @@ MonoBehaviour:
   deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
-  audioClipArray: [{fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3},
-    {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}, {fileID: 8300000,
-      guid: 76ead13a7c261a94b971192104909754, type: 3}, {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1,
-      type: 3}, {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3},
-    {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}, {fileID: 8300000,
-      guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}]
+  audioClipArray:
+  - {fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3}
+  - {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}
+  - {fileID: 8300000, guid: 76ead13a7c261a94b971192104909754, type: 3}
+  - {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1, type: 3}
+  - {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3}
+  - {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}
+  - {fileID: 8300000, guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}
 --- !u!61 &1422907530
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3907,12 +3923,14 @@ MonoBehaviour:
   deathSpeed: {x: 1, y: 0}
   isDragged: 0
   isOutside: 0
-  audioClipArray: [{fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3},
-    {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}, {fileID: 8300000,
-      guid: 76ead13a7c261a94b971192104909754, type: 3}, {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1,
-      type: 3}, {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3},
-    {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}, {fileID: 8300000,
-      guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}]
+  audioClipArray:
+  - {fileID: 8300000, guid: 33e3c32b68d9c7349b5b8f8da07b80b0, type: 3}
+  - {fileID: 8300000, guid: 1321994889f3ad447ba40012df2a8bf9, type: 3}
+  - {fileID: 8300000, guid: 76ead13a7c261a94b971192104909754, type: 3}
+  - {fileID: 8300000, guid: 8e044d2b7f0ce794a87c740935e834d1, type: 3}
+  - {fileID: 8300000, guid: 86150e5db13bcc64b8110b7bbfb77734, type: 3}
+  - {fileID: 8300000, guid: 3e214989db26cac40aa1a88f06ccb16d, type: 3}
+  - {fileID: 8300000, guid: 1a9b8727d3b45954b8928db3509daa5b, type: 3}
 --- !u!61 &1526306213
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4726,6 +4744,9 @@ MonoBehaviour:
   - {fileID: 8922061173122038269, guid: dad98d095c0d99945a1688668147e2eb, type: 3}
   waveArrayHard: []
   delayBetweenWaves:
+  - 10
+  - 10
+  - 10
   - 10
   - 10
   - 10
